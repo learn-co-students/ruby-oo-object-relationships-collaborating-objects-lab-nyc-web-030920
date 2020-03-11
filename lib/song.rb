@@ -23,7 +23,7 @@ class Song
         return @@all 
     end
     def self.new_by_filename(fn)
-        puts fn
+        # puts fn
         pair = fn.split(" - ")
         artist = pair[0]
         song = pair[1]
