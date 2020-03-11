@@ -19,6 +19,7 @@ class Song
         s = self.new(song)
         a = Artist.new(artist)
         a.add_song(s)
+        return s
         #TODO:
     end
 end
