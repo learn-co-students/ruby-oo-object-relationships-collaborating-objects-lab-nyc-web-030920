@@ -8,6 +8,17 @@ class Song
         @@all << self
     end
 
+    def artist_name=(name)
+        if !@artist || !(@artist.name == name)
+            artist = Artist.all.find {|artist| artist.name == name}
+            if artist
+                @artist = artist
+            else
+                @artist = Artist.new(name)
+            end
+        end
+    end
+
     def self.all 
         return @@all 
     end
